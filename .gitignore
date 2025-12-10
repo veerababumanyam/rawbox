@@ -14,10 +14,7 @@ dist-ssr
 
 # Environment files with secrets
 .env
-server/.env
-*.env
 !.env.example
-!server/.env.example
 
 # Editor directories and files
 .vscode/*

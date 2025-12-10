@@ -26,13 +26,8 @@ services:
     ports:
       - '3000:3000'
     env_file:
-      - ./server/.env
+      - .env
     environment:
-      - PORT=3000
-      - DATABASE_URL=postgresql://postgres:password@postgres:5432/luminos
-      - REDIS_URL=redis://redis:6379
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
       - NODE_ENV=production
     depends_on:
       postgres:
