@@ -1,0 +1,24 @@
+
+# RawBox Photography Platform - Robots.txt
+# Updated: 2024-12-09
+
+User-agent: *
+Allow: /
+Allow: /p/
+
+# Disallow private and system paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /settings/
+Disallow: /recycle-bin/
+Disallow: /deletion-schedules/
+
+# Allow public profile pages
+Allow: /p/*
+
+# Crawl delay (optional - adjust based on server capacity)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://RawBox.co/sitemap.xml

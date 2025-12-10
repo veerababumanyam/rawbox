@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm test:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node --loader tsx:*)",
+      "Bash(grep:*)",
+      "Bash(node:*)",
+      "Bash(git checkout:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(npm install:*)",
+      "Bash(docker-compose ps:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(curl:*)",
+      "Bash(docker ps:*)",
+      "Bash(docker-compose down:*)",
+      "Bash(docker-compose build:*)",
+      "Bash(docker exec:*)",
+      "Bash(npm test:run:*)",
+      "Bash(npm run test:run:*)",
+      "Bash(npx vitest run:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Integrate Docker containers with health checks and proper networking\n\n- Configure docker-compose.yml with health checks for all services\n  - nginx: health check on /health endpoint\n  - server: health check on /api/health with DB & Redis validation\n  - postgres: pg_isready health check\n  - redis: redis-cli ping health check\n  - Added service dependencies with health conditions\n\n- Add health check endpoint to server (/api/health)\n  - Validates PostgreSQL connection\n  - Validates Redis connection\n  - Returns JSON status with timestamp\n\n- Update server environment configuration\n  - Use container hostnames (postgres, redis) instead of localhost\n  - Configure OAuth redirects through nginx proxy (port 80)\n  - Add Redis connection variables\n  - Set NODE_ENV to production\n\n- Configure nginx reverse proxy\n  - Serve frontend static files from /dist\n  - Proxy /api/* requests to backend server\n  - Proxy /auth/* OAuth endpoints to backend\n  - Support large file uploads (500MB max)\n  - Enable gzip compression\n  - Add security headers\n\n- Add container names for better management\n- Configure proper startup order with health-based dependencies\n\nAll containers now properly integrated and verified working:\n- Frontend accessible at http://localhost\n- API proxied through nginx\n- Database and Redis connections verified\n- All health checks passing\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nchore: Remove sensitive credentials from repository\n\n- Remove .env files from git tracking\n- Add .env and server/.env to .gitignore\n- Create .env.example and server/.env.example templates\n- Prevent accidental commit of OAuth credentials and secrets\n\nSECURITY: This commit removes sensitive credentials that were\npreviously committed. Users should create their own .env files\nfrom the .env.example templates and add their own credentials.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git filter-repo:*)"
+    ]
+  }
+}

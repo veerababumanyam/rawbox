@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RawBox - Developed by Swaz Solutions</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============================================
+       RawBox DESIGN SYSTEM - SEMANTIC COLOR TOKENS
+       ============================================ */
+
+    :root {
+      /* Semantic Background Tokens */
+      --color-background: #f8fafc;
+      /* Main app background - Slate 50 */
+      --color-surface: #ffffff;
+      /* Card and container backgrounds */
+      --color-card: #ffffff;
+      /* Elevated card backgrounds */
+
+      /* Semantic Text Tokens */
+      --color-foreground: #0f172a;
+      /* Primary text color - Slate 900 */
+      --color-secondary-foreground: #475569;
+      /* Secondary text - Slate 600 */
+      --color-muted-foreground: #64748b;
+      /* Muted/disabled text - Slate 500 */
+
+      /* Semantic Border Tokens */
+      --color-border: #e2e8f0;
+      /* Default border color - Slate 200 */
+      --color-ring: #dc2626;
+      /* Focus ring color - Red 600 */
+
+      /* Semantic Interactive Tokens */
+      --color-accent: #dc2626;
+      /* Primary brand color - Red 600 */
+      --color-accent-hover: #b91c1c;
+      /* Hover state for accent - Red 700 */
+      --color-accent-light: #fef2f2;
+      /* Light accent background - Red 50 */
+      --color-accent-dark: #991b1b;
+      /* Dark accent variant - Red 800 */
+
+      /* Semantic Status Tokens */
+      --color-destructive: #ef4444;
+      /* Error/delete actions - Red 500 */
+      --color-destructive-foreground: #ffffff;
+      /* Text on destructive bg */
+      --color-destructive-soft: #fee2e2;
+      /* Light destructive bg - Red 100 */
+      --color-success: #22c55e;
+      /* Success states - Green 500 */
+      --color-success-soft: #dcfce7;
+      /* Light success bg - Green 100 */
+      --color-warning: #f59e0b;
+      /* Warning states - Amber 500 */
+      --color-warning-soft: #fef3c7;
+      /* Light warning bg - Amber 100 */
+      --color-info: #3b82f6;
+      /* Informational states - Blue 500 */
+      --color-info-soft: #dbeafe;
+      /* Light info bg - Blue 100 */
+
+      /* Legacy Support (mapped to semantic tokens) */
+      --color-primary: var(--color-foreground);
+      --color-secondary: var(--color-secondary-foreground);
+      --color-muted: #94a3b8;
+      /* Slate 400 */
+      --color-accent-main: var(--color-accent);
+    }
+
+    /* Dark Theme Overrides */
+    [data-theme='dark'] {
+      /* Semantic Background Tokens */
+      --color-background: #0f172a;
+      /* Main app background - Slate 900 */
+      --color-surface: #1e293b;
+      /* Card and container backgrounds - Slate 800 */
+      --color-card: #1e293b;
+      /* Elevated card backgrounds - Slate 800 */
+
+      /* Semantic Text Tokens */
+      --color-foreground: #f8fafc;
+      /* Primary text color - Slate 50 */
+      --color-secondary-foreground: #94a3b8;
+      /* Secondary text - Slate 400 */
+      --color-muted-foreground: #94a3b8;
+      /* Muted/disabled text - Slate 400 */
+
+      /* Semantic Border Tokens */
+      --color-border: #334155;
+      /* Default border color - Slate 700 */
+      --color-ring: #ef4444;
+      /* Focus ring color - Red 500 */
+
+      /* Semantic Interactive Tokens */
+      --color-accent: #ef4444;
+      /* Primary brand color - Red 500 */
+      --color-accent-hover: #f87171;
+      /* Hover state for accent - Red 400 */
+      --color-accent-light: #450a0a;
+      /* Light accent background - Red 950 */
+      --color-accent-dark: #dc2626;
+      /* Dark accent variant - Red 600 */
+
+      /* Semantic Status Tokens */
+      --color-destructive: #f87171;
+      /* Error/delete actions - Red 400 */
+      --color-destructive-foreground: #ffffff;
+      /* Text on destructive bg */
+      --color-destructive-soft: #450a0a;
+      /* Light destructive bg - Red 950 */
+      --color-success: #4ade80;
+      /* Success states - Green 400 */
+      --color-success-soft: #052e16;
+      /* Light success bg - Green 950 */
+      --color-warning: #fbbf24;
+      /* Warning states - Amber 400 */
+      --color-warning-soft: #451a03;
+      /* Light warning bg - Amber 950 */
+      --color-info: #60a5fa;
+      /* Informational states - Blue 400 */
+      --color-info-soft: #172554;
+      /* Light info bg - Blue 950 */
+
+      /* Legacy Support (mapped to semantic tokens) */
+      --color-primary: var(--color-foreground);
+      --color-secondary: var(--color-secondary-foreground);
+      --color-muted: #64748b;
+      /* Slate 500 */
+      --color-accent-main: var(--color-accent);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Screen Reader Only - Visually Hidden */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+  <script>
+    /* Tailwind CSS Configuration - Maps semantic tokens to utility classes */
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            /* Background Colors */
+            background: 'var(--color-background)',
+            surface: 'var(--color-surface)',
+            card: 'var(--color-card)',
+
+            /* Text Colors */
+            foreground: 'var(--color-foreground)',
+
+            /* Secondary Colors */
+            secondary: {
+              DEFAULT: 'var(--color-surface)',
+              foreground: 'var(--color-secondary-foreground)',
+            },
+
+            /* Muted Colors */
+            muted: {
+              DEFAULT: 'var(--color-background)',
+              foreground: 'var(--color-muted-foreground)',
+            },
+
+            /* Border and Ring */
+            border: 'var(--color-border)',
+            ring: 'var(--color-ring)',
+
+            /* Accent/Brand Colors */
+            accent: {
+              DEFAULT: 'var(--color-accent)',
+              hover: 'var(--color-accent-hover)',
+              light: 'var(--color-accent-light)',
+              dark: 'var(--color-accent-dark)',
+            },
+
+            /* Status Colors */
+            destructive: {
+              DEFAULT: 'var(--color-destructive)',
+              foreground: 'var(--color-destructive-foreground)',
+              soft: 'var(--color-destructive-soft)',
+            },
+            success: {
+              DEFAULT: 'var(--color-success)',
+              soft: 'var(--color-success-soft)',
+            },
+            warning: {
+              DEFAULT: 'var(--color-warning)',
+              soft: 'var(--color-warning-soft)',
+            },
+            info: {
+              DEFAULT: 'var(--color-info)',
+              soft: 'var(--color-info-soft)',
+            }
+          },
+          /* Typography */
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Roboto Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

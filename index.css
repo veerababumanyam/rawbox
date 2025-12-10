@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   MODERN COLOR SYSTEM - SEMANTIC COLOR TOKENS
+   Blue/Cyan Primary with Gold Premium Accents
+   ============================================ */
+
+:root {
+    /* Primary Colors */
+    --color-primary: #2563EB;
+    /* Blue 600 - Primary buttons, links, active states */
+    --color-primary-hover: #1D4ED8;
+    /* Blue 700 - Hover states for primary elements */
+    --color-accent: #06B6D4;
+    /* Cyan 500 - Secondary buttons, highlights, badges */
+    --color-accent-hover: #0891B2;
+    /* Cyan 600 - Hover states for accent elements */
+
+    /* Gold Premium Colors */
+    --color-gold: #D4AF37;
+    /* Gold - Premium borders, highlights, special badges */
+    --color-gold-light: #F4E4B0;
+    /* Gold Light - Gold backgrounds, subtle highlights */
+
+    /* Background Colors */
+    --color-background: #F8FAFC;
+    /* Slate 50 - Main app background */
+    --color-surface: #FFFFFF;
+    /* White - Cards, dropdowns, modals */
+    --color-surface-hover: #F1F5F9;
+    /* Slate 100 - Hover state for interactive surfaces */
+
+    /* Text Colors */
+    --color-text-primary: #0F172A;
+    /* Slate 900 - Headings, primary text */
+    --color-text-secondary: #475569;
+    /* Slate 600 - Body text, descriptions */
+    --color-text-tertiary: #64748B;
+    /* Slate 500 - Muted text, placeholders */
+
+    /* Border Colors */
+    --color-border: #E2E8F0;
+    /* Slate 200 - Dividers, input borders */
+    --color-border-focus: #2563EB;
+    /* Blue 600 - Focus rings, active borders */
+
+    /* Status Colors */
+    --color-success: #10B981;
+    /* Emerald 500 - Success messages, positive actions */
+    --color-warning: #F59E0B;
+    /* Amber 500 - Warnings, caution states */
+    --color-error: #EF4444;
+    /* Red 500 - Errors, destructive actions */
+    --color-info: #06B6D4;
+    /* Cyan 500 - Information, tips */
+
+    /* Legacy Mappings (for backward compatibility) */
+    --color-foreground: var(--color-text-primary);
+    --color-secondary-foreground: var(--color-text-secondary);
+    --color-muted-foreground: var(--color-text-tertiary);
+    --color-accent-DEFAULT: var(--color-accent);
+    --color-accent-main: var(--color-accent);
+    --color-accent-light: #ECFEFF;
+    /* Cyan 50 - Light accent background */
+    --color-accent-dark: #0E7490;
+    /* Cyan 700 - Dark accent variant */
+    --color-destructive: var(--color-error);
+    --color-destructive-foreground: #FFFFFF;
+    --color-destructive-soft: #FEE2E2;
+    /* Red 100 - Light destructive bg */
+    --color-success-soft: #DCFCE7;
+    /* Green 100 - Light success bg */
+    --color-warning-soft: #FEF3C7;
+    /* Amber 100 - Light warning bg */
+    --color-info-soft: #DBEAFE;
+    /* Blue 100 - Light info bg */
+    --color-ring: var(--color-border-focus);
+    --color-card: var(--color-surface);
+    --color-muted: #94A3B8;
+    /* Slate 400 */
+    --color-primary: var(--color-text-primary);
+    --color-secondary: var(--color-text-secondary);
+}
+
+/* Dark Theme Overrides */
+[data-theme='dark'] {
+    /* Primary Colors */
+    --color-primary: #3B82F6;
+    /* Blue 500 - Primary buttons, links, active states */
+    --color-primary-hover: #2563EB;
+    /* Blue 600 - Hover states for primary elements */
+    --color-accent: #22D3EE;
+    /* Cyan 400 - Secondary buttons, highlights, badges */
+    --color-accent-hover: #06B6D4;
+    /* Cyan 500 - Hover states for accent elements */
+
+    /* Gold Premium Colors */
+    --color-gold: #F4C430;
+    /* Gold - Premium borders, highlights, special badges */
+    --color-gold-light: #8B7528;
+    /* Gold Light - Gold backgrounds, subtle highlights */
+
+    /* Background Colors */
+    --color-background: #0F172A;
+    /* Slate 900 - Main app background */
+    --color-surface: #1E293B;
+    /* Slate 800 - Cards, dropdowns, modals */
+    --color-surface-hover: #334155;
+    /* Slate 700 - Hover state for interactive surfaces */
+
+    /* Text Colors */
+    --color-text-primary: #F1F5F9;
+    /* Slate 100 - Headings, primary text */
+    --color-text-secondary: #CBD5E1;
+    /* Slate 300 - Body text, descriptions */
+    --color-text-tertiary: #94A3B8;
+    /* Slate 400 - Muted text, placeholders */
+
+    /* Border Colors */
+    --color-border: #334155;
+    /* Slate 700 - Dividers, input borders */
+    --color-border-focus: #3B82F6;
+    /* Blue 500 - Focus rings, active borders */
+
+    /* Status Colors */
+    --color-success: #34D399;
+    /* Emerald 400 - Success messages, positive actions */
+    --color-warning: #FBBF24;
+    /* Amber 400 - Warnings, caution states */
+    --color-error: #F87171;
+    /* Red 400 - Errors, destructive actions */
+    --color-info: #22D3EE;
+    /* Cyan 400 - Information, tips */
+
+    /* Legacy Mappings (for backward compatibility) */
+    --color-foreground: var(--color-text-primary);
+    --color-secondary-foreground: var(--color-text-secondary);
+    --color-muted-foreground: var(--color-text-tertiary);
+    --color-accent-DEFAULT: var(--color-accent);
+    --color-accent-main: var(--color-accent);
+    --color-accent-light: #164E63;
+    /* Cyan 900 - Light accent background */
+    --color-accent-dark: #06B6D4;
+    /* Cyan 500 - Dark accent variant */
+    --color-destructive: var(--color-error);
+    --color-destructive-foreground: #FFFFFF;
+    --color-destructive-soft: #450A0A;
+    /* Red 950 - Light destructive bg */
+    --color-success-soft: #052E16;
+    /* Green 950 - Light success bg */
+    --color-warning-soft: #451A03;
+    /* Amber 950 - Light warning bg */
+    --color-info-soft: #172554;
+    /* Blue 950 - Light info bg */
+    --color-ring: var(--color-border-focus);
+    --color-card: var(--color-surface);
+    --color-muted: #64748B;
+    /* Slate 500 */
+    --color-primary: var(--color-text-primary);
+    --color-secondary: var(--color-text-secondary);
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme switching */
+* {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+/* Disable transitions for elements that shouldn't animate */
+button,
+input,
+select,
+textarea {
+    transition-property: background-color, border-color, color, box-shadow;
+}
+
+/* Screen Reader Only - Visually Hidden */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--color-surface);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-tertiary);
+}

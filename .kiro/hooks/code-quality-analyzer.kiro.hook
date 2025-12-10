@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Code Quality Analyzer",
+  "description": "Monitors source code files for changes and analyzes them for potential improvements including code smells, design patterns, best practices, readability, maintainability, and performance optimizations",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": []
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Analyze the modified code in the changed file for potential improvements. Focus on:\n\n1. **Code Smells**: Identify any code smells such as duplicated code, long functions, large classes, excessive parameters, or complex conditionals\n2. **Design Patterns**: Suggest appropriate design patterns that could improve the code structure\n3. **Best Practices**: Check adherence to React best practices, TypeScript best practices, and the project's established patterns from the workspace rules\n4. **Readability**: Evaluate code clarity, naming conventions, and documentation\n5. **Maintainability**: Assess how easy the code would be to modify and extend\n6. **Performance**: Identify potential performance issues like unnecessary re-renders, missing memoization, inefficient algorithms, or memory leaks\n7. **Security**: Check for security concerns based on the security guidelines\n8. **Accessibility**: Verify accessibility compliance where applicable\n\nProvide specific, actionable suggestions with code examples where helpful. Prioritize the most impactful improvements. Maintain a constructive tone and acknowledge what's done well."
+  },
+  "workspaceFolderName": "luminos",
+  "shortName": "code-quality-analyzer"
+}
